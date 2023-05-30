@@ -1,0 +1,25 @@
+.btnsActions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btnsActions button {
+  cursor: pointer;
+  border-radius: 5px;
+  color: var(--textWhiS);
+  text-transform: capitalize;
+  background-color: var(--btnPur);
+  border: none;
+  padding: 10px;
+}
+
+.btnsActions :is(button:enabled):hover {
+  background-color: var(--btnPurHover);
+}
+
+:is(button:disabled){
+  background-color: var(--btnPurDisable);
+  cursor: initial;
+}

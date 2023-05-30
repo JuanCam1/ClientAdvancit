@@ -1,0 +1,5 @@
+.is-active {
+  color: var(--textCre) !important;
+  border-bottom: 2px solid  var(--textCre) !important;
+  pointer-events: none;
+}

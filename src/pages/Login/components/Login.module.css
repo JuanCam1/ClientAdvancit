@@ -1,0 +1,153 @@
+.containerLogin {
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem;
+  display: grid;
+  place-content: center;
+}
+
+.containerLogin > div {
+  width: 100%;
+  max-width: 500px;
+  display: grid;
+  place-content: center;
+  row-gap: 2rem;
+}
+
+.loginLogo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.loginLogo > div {
+  background-color: var(--btnPur);
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+
+.containerImg {
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  height: 9rem;
+  width: 9rem;
+  background-color: #ffffff;
+}
+
+.loginLogo img {
+  width: 100px;
+  height: 100%;
+}
+
+.loginForm {
+  width: 100vw;
+  padding: 0 2rem;
+  max-width: 400px;
+}
+
+.loginForm form div:not(:last-child) {
+  height: 3rem;
+  margin-bottom: 1rem;
+  border: 1px solid #b8b8b8;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 10px;
+  border-radius: 5px;
+}
+
+.loginForm form div svg {
+  display: inline-block;
+  width: 8%;
+  height: 70%;
+  color: var(--textWhi);
+}
+
+.loginForm form div input {
+  height: 100%;
+  width: 90%;
+  border: none;
+  background-color: var(--backColor);
+  color: var(--textGre);
+}
+
+.loginForm form div input:focus-visible {
+  border: none;
+  outline: none;
+}
+
+.loginButton {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.loginButton button {
+  cursor: pointer;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 5px;
+  color: var(--textWhi);
+  padding: 1em 1.8em;
+  background: var(--btnPur);
+  display: flex;
+  transition: 0.2s background;
+  align-items: center;
+  gap: 0.6em;
+  font-weight: bold;
+}
+
+.arrowWrappe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow {
+  margin-top: 1px;
+  width: var(--arrow-width);
+  background: var(buttonP);
+  height: var(--arrow-stroke);
+  position: relative;
+  transition: 0.2s;
+}
+
+.arrow::before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  border: solid var(--textWhi);
+  border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+  display: inline-block;
+  top: -3px;
+  right: 3px;
+  transition: 0.2s;
+  padding: 3px;
+  transform: rotate(-45deg);
+}
+
+.loginButton button:hover {
+  background-color: var(--btnPurHover);
+}
+
+.loginButton button:hover .arrow {
+  background: var(--textWhi);
+}
+
+.loginButton button:hover .arrow::before {
+  right: 0;
+}
+
+@media screen and (min-width: 400px) {
+  .containerLogin > div {
+    padding: 3rem 0;
+    border: 1px solid #cecece;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  }
+}

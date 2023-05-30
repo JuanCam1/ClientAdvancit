@@ -1,0 +1,40 @@
+@import url('./styles/normalize.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--backColor);
+}
+
+:root {
+  /* --btnPur: #645bff; */
+  /* --btnPurHover: #5953cf; */
+  /* --backColor: #012345; */
+  /* --backColorHover: #112240; */
+
+  --btnPur: #35388d;
+  --btnPurDisable: #5a5ec7;
+  --btnPurHover: #2c2e72;
+  --btnAz: #2d83b2;
+  --arrow-width: 10px;
+  --arrow-stroke: 2px;
+  --backColor: #212121;
+  --backColorHover: #1a1919;
+  --textGre: #60ffd9;
+  --textPur: #61388c;
+  --textCre: #a9a297;
+  --textAzul: #b0cdf1;
+  --textWhi: #fff;
+  --textWhiS: #e4e2e2;
+  --border: #b8b8b8;
+}

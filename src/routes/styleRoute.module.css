@@ -1,0 +1,9 @@
+.containerRoute {
+  padding-top: min(60px, 10vh);
+}
+
+@media screen and (max-width: 960px) {
+  .containerRoute {
+    padding-top: 0;
+  }
+}

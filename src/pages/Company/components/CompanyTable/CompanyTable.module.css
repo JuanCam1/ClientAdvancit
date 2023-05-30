@@ -1,0 +1,44 @@
+.listCompanies {
+  padding: 1rem;
+  position: relative;
+  text-align: center;
+  height: auto;
+}
+
+.listTitle {
+  color: var(--textWhi);;
+  font-weight: 900;
+  margin-bottom: 0.8rem;
+  pointer-events: none;
+  font-size: 2rem;
+}
+
+.listCompanies span {
+  color: var(--textWhiS);;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+
+@media screen and (max-width: 700px) {
+  
+
+  .listTitle {
+    font-size: 1.5rem;
+    margin-left: 0;
+  }
+
+  .listCompanies {
+    position: relative;
+    height: auto;
+    padding-bottom: 3rem;
+  }
+
+  .listCompanies span {
+    font-size: 1rem;
+    margin-left: 0;
+  }
+
+  
+}
+

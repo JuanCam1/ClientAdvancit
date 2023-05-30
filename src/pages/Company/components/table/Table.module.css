@@ -1,0 +1,193 @@
+.listTable table {
+  border: 1px solid var(--border);
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 1200px;
+  table-layout: fixed;
+  background-color: var(--backColor);
+  color: var(--textWhiS);
+}
+
+.listTable table caption {
+  font-size: 1.5rem;
+  margin: 0.5rem 0 0.75rem;
+}
+
+.listTable table tr {
+  border: 1px solid #ddd;
+  padding: 0.35rem;
+  cursor: initial;
+}
+
+.listTable table tbody tr:hover {
+  background-color: var(--backColorHover);
+}
+
+.listTable table th {
+  padding: 15px 0;
+}
+
+.listTable table td {
+  padding: 5px 0;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.listTable table th {
+  font-size: 0.85rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.textCap {
+  text-transform: capitalize;
+}
+
+.listTable {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.buttons button {
+  cursor: pointer;
+  border: none;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.info {
+  background-color: #f1930e;
+}
+
+.dian {
+  background-color: var(--btnPur);
+}
+
+.fact {
+  background-color: var(--btnAz);
+}
+
+.btnsActions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btnsActions button {
+  cursor: pointer;
+  border-radius: 5px;
+  color: var(--textWhiS);
+  text-transform: capitalize;
+  background-color: var(--btnPur);
+  border: none;
+  padding: 10px;
+}
+
+.btnsActions :is(button:enabled):hover {
+  background-color: var(--btnPurHover);
+}
+
+:is(button:disabled) {
+  background-color: var(--btnPurDisable);
+  cursor: initial;
+}
+
+.copyCont {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.copy {
+  background-color: #cecece;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #b8b8b8;
+  cursor: pointer;
+}
+
+.copy:hover {
+  background-color: #9c9c9c;
+}
+
+@media screen and (min-width: 700px) and (max-width: 1200px) {
+  .buttons { 
+    padding-right: 5px;
+  }
+  .dian, .fact{
+    width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .listTable table {
+    border: 0;
+  }
+
+  .listTable table caption {
+    font-size: 1.3rem;
+  }
+
+  .listTable table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  .listTable table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: 0.625rem;
+  }
+
+  .listTable table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 0.8rem;
+    text-align: right;
+  }
+
+  .listTable table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .listTable table td:last-child {
+    border-bottom: 0;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+  }
+
+  .listTable table button {
+    border: none;
+    padding: 4px 8px;
+    color: white;
+    cursor: pointer;
+  }
+}
